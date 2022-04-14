@@ -1,0 +1,16 @@
+courses:
+  - name: dummy
+    cid: 664194332
+    pwd: 9742
+    weekday: thursday
+    time: '12:35'
+  - name: algo
+    cid: 688484180
+    pwd: 5476
+    weekday: thursday
+    time: '13:20'
+  - name: sj
+    cid: 664194332
+    pwd: 9742
+    weekday: thursday
+    time: '18:50'
