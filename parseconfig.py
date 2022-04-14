@@ -8,7 +8,7 @@ def clock():
     # 用于在log里打印时钟
     now = datetime.datetime.now()
     ts = now.strftime('%Y-%m-%d %H:%M:%S')
-    print('[CLOCK] ﾟ ∀ﾟ)ノ {} ', ts)
+    print('[CLOCK] ﾟ ∀ﾟ)ノ {} '.format(ts))
 
 
 def task_closure(name,cid,pwd):
