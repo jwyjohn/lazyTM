@@ -5,22 +5,25 @@ import time
 import datetime
 
 def clock():
+    # 用于在log里打印时钟
     now = datetime.datetime.now()
     ts = now.strftime('%Y-%m-%d %H:%M:%S')
-    print('[CLOCK]', ts)
+    print('[CLOCK] ﾟ ∀ﾟ)ノ {} ', ts)
 
 
 def task_closure(name,cid,pwd):
+    # 返回一个加入会议的函数
     def task():
-        print("[INFO] {} entering meeting {}:{}!".format(name,cid,pwd))
+        print("[INFO] (*ﾟ∇ﾟ) {} entering meeting {}:{}!".format(name,cid,pwd))
         try:
             enter_meeting(cid, pwd, "mewo~")
         except:
-            print("[ERRO] {} failed enter meeting {} !".format(name,cid))
+            print("[ERRO] Σ( ﾟдﾟ) {} failed enter meeting {} !".format(name,cid))
 
     return task
 
 def read_curr(filename):
+    # 读yaml，然后按要求返回一个Scheduler
     with open(filename, encoding='utf-8') as f:
         curr = yaml.load(f, Loader=yaml.FullLoader)
     sche = schedule.Scheduler()
