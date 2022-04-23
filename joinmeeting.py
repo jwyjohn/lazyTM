@@ -6,6 +6,7 @@ from subprocess import Popen
 
 # tm_path = r'C:\Program Files (x86)\Tencent\WeMeet\wemeetapp.exe'
 
+
 def enter_meeting(cid, pwd, uname, tm_path, timeout):
     Popen(tm_path, shell=True)
     dlg = Desktop(backend="uia").window(title="腾讯会议(LoadingWnd)")
@@ -32,8 +33,8 @@ def enter_meeting(cid, pwd, uname, tm_path, timeout):
     sleep(timeout)
     dlg = Desktop(backend="uia").window(title="")
     sleep(timeout)
-    send_keys(str(pwd)+"{ENTER}")
-    sleep(timeout)
+    if len(pwd) > 0:
+        send_keys(str(pwd)+"{ENTER}")
+        sleep(timeout)
     dlg = Desktop(backend="uia").window(title="腾讯会议(InMeetingWnd)")
-    print("[Done] joined meeting {} with name = {} .".format(cid,uname))
-
+    print("[Done] joined meeting {} with name = {} .".format(cid, uname))
