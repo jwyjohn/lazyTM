@@ -36,7 +36,7 @@ class timerTM():
         # self.preset = ttk.Combobox(self.root, values=tuple(
         #     ["07:50:00", "09:50:00", "13:20:00", "15:20:00", "18:50:00"]), width=7, state='readonly')
         self.preset = ttk.Combobox(
-            self.root, values=tuple(l24), width=7, state='readonly')
+            self.root, values=tuple(l24), width=8, font=('Fixedsys'), state='readonly')
         self.preset.current(0)
         self.preset.grid(column=5, row=2)
 
@@ -49,7 +49,7 @@ class timerTM():
 
         self.commit_btn = tk.Button(
             self.root, text="Commit", font=('Fixedsys'), command=self.commit)
-        self.commit_btn.grid(column=0, row=4)
+        self.commit_btn.grid(column=0, row=4, columnspan=6, sticky=tk.E+tk.W)
 
         self.label_nowtime = tk.Label(text="", font=('Fixedsys'))
         self.label_nowtime.grid(column=0, row=5)
