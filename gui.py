@@ -79,4 +79,5 @@ class timerTM():
             self.root.destroy()
 
 
-app = timerTM()
+if __name__=="__main__":
+    app = timerTM()
