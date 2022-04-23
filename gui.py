@@ -4,6 +4,7 @@ from tkinter import messagebox
 import time
 from joinmeeting import *
 
+l24 = ["{:0>2d}:{:0>2d}:00".format(h,m) for h in range(24) for m in range(60)]
 
 class timerTM():
     def __init__(self):
@@ -28,8 +29,9 @@ class timerTM():
 
         self.label_timeset = tk.Label(text="Enter at ", font=('Fixedsys'))
         self.label_timeset.grid(column=0, row=2)
-        self.preset = ttk.Combobox(self.root, values=tuple(
-            ["07:50:00", "09:50:00", "13:20:00", "15:20:00", "18:50:00"]), width=7, state='readonly')
+        # self.preset = ttk.Combobox(self.root, values=tuple(
+        #     ["07:50:00", "09:50:00", "13:20:00", "15:20:00", "18:50:00"]), width=7, state='readonly')
+        self.preset = ttk.Combobox(self.root, values=tuple(l24), width=7, state='readonly')
         self.preset.current(0)
         self.preset.grid(column=5, row=2)
 
