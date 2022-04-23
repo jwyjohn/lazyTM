@@ -1,9 +1,4 @@
 courses:
-  - name: dummy
-    cid: 664194332
-    pwd: 9742
-    weekday: thursday
-    time: '12:49'
   - name: algo
     cid: 688484180
     pwd: 5476
@@ -14,3 +9,28 @@ courses:
     pwd: 9742
     weekday: thursday
     time: '18:50'
+  - name: os01
+    cid: 243742842
+    pwd: 3647
+    weekday: tuesday
+    time: '07:52'
+  - name: mainframe
+    cid: 920761776
+    pwd: 7477
+    weekday: wednesday
+    time: '13:22'
+  - name: sad
+    cid: 381586399
+    pwd: 1080
+    weekday: wednesday
+    time: '15:20'
+  - name: jinjiao
+    cid: 697699216
+    pwd: 6101
+    weekday: wednesday
+    time: '18:50'
+  - name: db2
+    cid: 466290929
+    pwd: 5877
+    weekday: thursday
+    time: '09:50'
